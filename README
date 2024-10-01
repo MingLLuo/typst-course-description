@@ -3,3 +3,36 @@
 Mainly used for master programs' applications, providing (zh) and (en) mode for users to choose from.
 
 - Under Construction, may not be practical to use at the moment.
+- Read the code and modify it to fit your needs.
+
+## Usage
+
+#### Python Script (my workflow)
+
+1. Generate 'CSV' file from 'Excel' file (paste from pdf).
+  - name it 'courses.csv'.
+  - 'CSV' file should be in the following format and order:
+    ```
+    semester_zh,course_zh,nature_zh,ncredit,grade_zh,semester_en,course_e,nature_en,grade_en
+    ```
+2. Run 'csv2json.py' to convert 'CSV' file to 'JSON' file. 
+  - generate 'courses.json' file.
+  - this will automatically generate 'description_zh' and 'description_en' in 'JSON' file. (empty value)
+3. Run 'json2md.py' to fill in 'description_zh' and 'description_en'.
+  - generate 'courses.md' file.
+4. Run 'md2json.py' to convert 'md' file to 'JSON' file.
+  - generate 'courses.json' file.
+
+### Typst
+
+- Change Language Mode in 'utils.typ'
+
+## Reference
+
+- https://github.com/matchy233/typst-chi-cv-template
+- https://github.com/ice1000/resume
+- https://github.com/werifu/HUST-typst-template
+
+## TODO
+- [ ] More Complex Layout.
+- [ ] More Customization.

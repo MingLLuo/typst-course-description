@@ -1,11 +1,11 @@
-## Editors ##
+***/.DS_Store
 
 .idea/
 .vs/
 .vscode/
 
-## Emacs/Vim ##
-
 *~
 *.json
 *.pdf
+*.md
+bak*
