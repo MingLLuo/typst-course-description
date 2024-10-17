@@ -9,17 +9,17 @@
 // 5. Your Major
 // School Logo
 
-#set text(font: translate(zh: "SimSun", en: "Bookerly"))
+#set text(font: translate(zh: "SimSun", en: "Arial"))
 
 #FrontPage(
-  appliedSchool: translate(
-    zh: "奥胡斯大学",
-    en: "Aarhus University",
-  ),
-  appliedMajor: translate(
-    zh: "计算机科学",
-    en: "Computer Science",
-  ),
+  // appliedSchool: translate(
+  //   zh: "奥胡斯大学",
+  //   en: "Aarhus University",
+  // ),
+  // appliedMajor: translate(
+  //   zh: "计算机科学",
+  //   en: "Computer Science",
+  // ),
   name: translate(
     zh: "史豪",
     en: "Shi Hao",
@@ -29,11 +29,11 @@
     en: "South China Normal University",
   ),
   graduatedMajor: translate(
-    zh: "计算机科学",
-    en: "Computer Science",
+    zh: "计算机科学与技术",
+    en: "Computer Science and Technology",
   ),
   term: term("2021", "秋季", "Fall") + " - " + term("2025", "春季", "Spring"),
-  graduatedLogoLink: "assets/logo.png",
+  graduatedLogoLink: "assets/scnu.svg",
   date: "2024/12/1",
 )
 #counter(page).update(1)
@@ -184,13 +184,14 @@
       #let credit_value_float = credit_value * Factor-to-ECTS
       #table(
         columns: 9 * (1fr,),
-        align: center + horizon,
+        rows: (auto, auto, auto),
+        align: horizon,
         inset: 10pt,
 // First Line of the Table
 // | - Course - | - Semester -|
         table.cell(colspan: 2,text(weight: "bold")[#key_map.at(course, default: "[n/a]")]),
-        table.cell(colspan: 3, grid(align: center)[
-          == #text(size: 10pt, weight: "regular",[#info.at(course, default: "[n/a]")])
+        table.cell(colspan: 3, grid(align: horizon)[
+          == #text(size: 10pt, weight: "medium",[#info.at(course, default: "[n/a]")])
           ]),
         table.cell(colspan: 2,text(weight: "bold")[#key_map.at(semester, default: "[n/a]")]),
         table.cell(colspan: 2, info.at(semester, default: "[n/a]")),
@@ -209,9 +210,14 @@
         table.cell(colspan: 2, text(weight: "bold")[#key_map.at(description, default: "[n/a]")]),
         table.cell(colspan: 7, info.at(description, default: "[n/a]")),
       )
-      // #pagebreak()
+      #pagebreak()
     ]
   }
 }
 
 #course-description-json(courses)
+
+
+// Last page: Appendix, include
+// 1. Source of the description
+// 2. Signature, date

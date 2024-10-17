@@ -72,8 +72,8 @@
 }
 
 #let FrontPage(
-  appliedSchool: "",
-  appliedMajor: "",
+  // appliedSchool: "",
+  // appliedMajor: "",
   name: "",
   graduatedFrom: "",
   graduatedMajor: "",
@@ -94,7 +94,7 @@
     #v(20pt)
     #image(
       graduatedLogoLink,
-      width: 10cm,
+      width: 6cm,
     )
   ]
 
@@ -106,8 +106,8 @@
       columns: (auto, 300pt),
       rows: (50pt, 50pt),
       gutter: 3pt,
-      info_key(translate(zh: [申请学校], en: [Applied School])), info_value(appliedSchool),
-      info_key(translate(zh: [申请专业], en: [Applied Major])), info_value(appliedMajor),
+      // info_key(translate(zh: [申请学校], en: [Applied School])), info_value(appliedSchool),
+      // info_key(translate(zh: [申请专业], en: [Applied Major])), info_value(appliedMajor),
       info_key(translate(zh: [姓名], en: [Name])), info_value(name),
       info_key(translate(zh: [毕业院校], en: [Graduated From])), info_value(graduatedFrom),
       info_key(translate(zh: [毕业专业], en: [Graduated Major])), info_value(graduatedMajor),

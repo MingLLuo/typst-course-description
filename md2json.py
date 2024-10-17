@@ -13,7 +13,6 @@ def md_to_json(md_file_path, json_file_path="courses.json"):
         headers = [
             header.strip() for header in lines[0].strip().split("|") if header.strip()
         ]
-        print(f"Headers: {headers}")
 
         # pass the first two lines (header and separator)
         for line in lines[2:]:
